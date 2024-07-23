@@ -26,7 +26,7 @@ def CSCEA490_HW_ERP(pNum):
     if not isinstance(pNum, int):
         raise ValueError('The function requires one input (the participant number)')
     # Add to path all files and folders in the parent directory of "Code"
-    parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    parent_dir = os.path.abspath(os.path.join(os.getcwd(), '..'))
     sys.path.append(parent_dir)
     # Time windows and labels -- not using right now
     tWinIdx = np.tile(np.arange(1, 7), (11, 1)) + np.tile(np.arange(-6, 25, 3).reshape(-1, 1), (1, 6)) + 7
